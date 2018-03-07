@@ -10,6 +10,8 @@ lazy val root = Project(
   name := "akka-persistence-no-ops",
   libraryDependencies ++= Seq(
     "com.typesafe.akka" %% "akka-persistence" % akkaVersion,
+    "com.typesafe.akka" %% "akka-stream-testkit" % akkaVersion % "test",
+    "com.typesafe.akka" %% "akka-persistence-tck" % akkaVersion % "test",
   ),
   organization := "com.github.mingchuno",
   scalaVersion := "2.12.4",
