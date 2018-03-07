@@ -9,7 +9,7 @@ lazy val root = Project(
 ).settings(
   name := "akka-persistence-no-ops",
   libraryDependencies ++= Seq(
-    // TODO:
+    "com.typesafe.akka" %% "akka-persistence" % akkaVersion,
   ),
   organization := "com.github.mingchuno",
   scalaVersion := "2.12.4",
