@@ -1,10 +1,10 @@
 package akka.persistence.journal.noops
 
 import akka.persistence.CapabilityFlag
-import akka.persistence.journal.JournalSpec
+import akka.persistence.journal.JournalPerfSpec
 import com.typesafe.config.ConfigFactory
 
-class NoopsJournalSpec extends JournalSpec(
+class NoopsJournalPerfSpec extends JournalPerfSpec(
   config = ConfigFactory.parseString(
     """
       |akka.persistence.journal.plugin = "akka-persistence-no-ops.journal"
