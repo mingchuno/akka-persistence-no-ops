@@ -14,7 +14,7 @@ lazy val root = Project(
     "com.typesafe.akka" %% "akka-persistence-tck" % akkaVersion % "test",
   ),
   organization := "com.github.mingchuno",
-  scalaVersion := "2.12.4",
+  scalaVersion := "2.12.13",
   version      := "0.1.0",
   crossScalaVersions := Seq("2.11.12", "2.12.4"),
   scalacOptions ++= Seq(
