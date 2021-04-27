@@ -24,12 +24,11 @@ lazy val root = Project(
     "-language:existentials",
     "-language:implicitConversions",
     "-language:higherKinds",
-    "-language:postfixOps",
-    "-Xfuture"
+    "-language:postfixOps"
   ),
-  parallelExecution in Test := false,
-  fork in Test := true,
-  testOptions in Test += Tests.Argument("-oD"),
+  Test / parallelExecution := false,
+  Test / fork := true,
+  Test / testOptions += Tests.Argument("-oD"),
   publishTo := SonatypeKeys.sonatypePublishTo.value,
   publishMavenStyle := true,
   homepage := Some(url("https://github.com/mingchuno/akka-persistence-no-ops")),
