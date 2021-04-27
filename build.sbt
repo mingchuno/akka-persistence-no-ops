@@ -1,7 +1,7 @@
 import Keys._
 import xerial.sbt.Sonatype._
 
-val akkaVersion = "2.5.25"
+val akkaVersion = "2.6.14"
 
 lazy val root = Project(
   id = "akka-persistence-no-ops",
@@ -11,12 +11,12 @@ lazy val root = Project(
   libraryDependencies ++= Seq(
     "com.typesafe.akka" %% "akka-persistence" % akkaVersion,
     "com.typesafe.akka" %% "akka-stream-testkit" % akkaVersion % "test",
-    "com.typesafe.akka" %% "akka-persistence-tck" % akkaVersion % "test",
+    "com.typesafe.akka" %% "akka-persistence-tck" % akkaVersion % "test"
   ),
   organization := "com.github.mingchuno",
-  scalaVersion := "2.12.4",
-  version      := "0.1.0",
-  crossScalaVersions := Seq("2.11.12", "2.12.4"),
+  scalaVersion := "2.13.5",
+  version := "0.1.0",
+  crossScalaVersions := Seq("2.12.13"),
   scalacOptions ++= Seq(
     "-unchecked",
     "-deprecation",
@@ -40,7 +40,12 @@ lazy val root = Project(
     )
   ),
   developers := List(
-    Developer(id = "mingchuno", name = "Or Ming Chun", email = "mingchuno@gmail.com", url = url("https://github.com/mingchuno"))
+    Developer(
+      id = "mingchuno",
+      name = "Or Ming Chun",
+      email = "mingchuno@gmail.com",
+      url = url("https://github.com/mingchuno")
+    )
   ),
   licenses := Seq("MIT" -> url("https://opensource.org/licenses/MIT"))
 )
