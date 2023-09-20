@@ -1,7 +1,7 @@
 import Keys._
 import xerial.sbt.Sonatype._
 
-val akkaVersion = "2.7.0"
+val akkaVersion = "2.8.5"
 
 lazy val root = Project(
   id = "akka-persistence-no-ops",
